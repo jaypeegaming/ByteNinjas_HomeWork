@@ -20,7 +20,7 @@ public class MilestoneCalculator extends JFrame implements ActionListener, KeyLi
         getContentPane().setBackground(new Color(240, 240, 240)); // Set background color
 
         // Set application icon
-        ImageIcon icon = new ImageIcon("src/MMDC_Logo.jpg"); // Replace "icon.png" with the path to your icon file
+        ImageIcon icon = new ImageIcon("ByteNinjas_HomeWork/src/MMDC_Logo.jpg"); // Replace "MMdC.png" with the path to your icon file
         Image image = icon.getImage();
         setIconImage(image);
 
@@ -93,14 +93,14 @@ public class MilestoneCalculator extends JFrame implements ActionListener, KeyLi
             double terminal = Double.parseDouble(terminalField.getText());
 
             // Validate input values
-            if (milestone1 < 0 || milestone1 > 25 || milestone2 < 0 || milestone2 > 35 || terminal < 0 || terminal > 100) {
+            if (milestone1 < 0 || milestone1 > 25 || milestone2 < 0 || milestone2 > 35 || terminal < 0 || terminal > 40) {
                 throw new IllegalArgumentException("Invalid input. Values should be Numeric between 0 and maximum points per Milestone.");
             }
 
             // Calculate grades for each milestone
             double milestone1Grade = (milestone1 / 25) * 25;
             double milestone2Grade = (milestone2 / 35) * 35;
-            double terminalGrade = (terminal / 100) * 100;
+            double terminalGrade = (terminal / 40) * 40;
 
             // Calculate total grade
             double totalGrade = milestone1Grade + milestone2Grade + terminalGrade;
